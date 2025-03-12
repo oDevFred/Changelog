@@ -15,4 +15,27 @@ async function fetchChangelog() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', fetchChangelog);
+document.addEventListener('DOMContentLoaded', async () => {
+    await fetchChangelog();
+
+    const changelogDivs = document.querySelectorAll('#changelog div');
+    changelogDivs.forEach((div, index) => {
+        // Remove divs vazias ou só com espaços/brancos
+        if (!div.textContent.trim()) {
+            div.remove();
+            return; // Sai daqui pra não adicionar classe em divs que já foram removidas
+        }
+
+        div.classList.add('changelog-item');
+        div.setAttribute('id', `changelog-item-${index}`);
+    });
+
+    const changelogList = document.querySelector('#changelog ol');
+    if (changelogList) changelogList.classList.add('changelog-list');
+
+    const item = document.getElementById('changelog-item-2');
+    item.innerHTML = '<strong>DISCLAIMER PT-BR:</strong> As traduções estão sendo trabalhadas e serão entregues com a proxima atualização do modpack +3 new chapters';
+});
+
+
+

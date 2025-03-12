@@ -1,59 +1,134 @@
 /* Reset básico */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-background-color: #f0f2f5;
-font-family: 'Roboto', sans-serif;
-padding: 20px;
-color: #333;
+    background-color: #f0f2f5;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    color: #333;
 }
 
 /* Container centralizado com sombra e bordas arredondadas */
 .container {
-max-width: 800px;
-margin: 20px auto;
-background-color: #fff;
-border-radius: 8px;
-padding: 20px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Título estilizado */
 h1 {
-text-align: center;
-margin-bottom: 20px;
-font-size: 2em;
-color: #444;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
 }
 
 /* Estilos para o conteúdo do changelog */
 #changelog {
-line-height: 1.6;
-font-size: 16px;
-color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #555;
 }
 
-/* Exemplo de estilização para listas */
-#changelog ol,
+/* Estilização para listas ordenadas */
+#changelog ol {
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+/* Estilização para listas não ordenadas com ícones customizados */
 #changelog ul {
-margin-left: 20px;
-padding-left: 20px;
+    margin-left: 20px;
+    padding-left: 20px;
+    list-style: none;
 }
 
+#changelog ul li::before {
+    margin-right: 8px;
+    color: #4CAF50;
+}
+
+/* Estilo para itens da lista */
 #changelog li {
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 /* Exemplo de destaque para textos fortes */
 #changelog strong {
-color: #222;
+    color: #222;
+    font-weight: bold;
 }
 
-/* Espaçamento para parágrafos */
+/* Espaçamento para parágrafos e divisões */
 #changelog div {
-margin-bottom: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#changelog div:hover {
+    background-color: #e8f5e9;
+}
+
+/* Estilo adicional para títulos dentro do changelog */
+#changelog div strong {
+    font-size: 1.1em;
+    color: #4CAF50;
+}
+
+/* Estilo para separar visualmente seções diferentes */
+#changelog-item-1 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #4CAF50;
+}
+
+#changelog-item-2::before {
+    content: '\1F1E7\1F1F7';
+    margin-right: 8px;
+}
+
+#changelog-item-3::before {
+    content: '\1F6E0\FE0F';
+    margin-right: 8px;
+}
+
+#changelog-item-4::before {
+    content: '\1F3ED';
+    margin-right: 8px;
+}
+
+#changelog-item-6::before {
+    content: '\1F4DC';
+    margin-right: 8px;
+}
+
+#changelog-item-7::before {
+    content: '\1FAB2';
+    margin-right: 8px;
+}
+
+#changelog-item-9::before {
+    content: '\2795';
+    margin-right: 8px;
+}
+
+#changelog-item-9 li::before {
+    content: '\2714';
+    margin-right: 8px;
+}
+
+#changelog-item:last-child {
+    border-bottom: none;
 }
