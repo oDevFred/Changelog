@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors'); // Importe o cors
 const { Curseforge } = require('node-curseforge');
-const dotenv = require('dotenv').config();
+//const dotenv = require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 
 // Substitua 'SUA_API_KEY_AQUI' pela sua chave de API
-const cf = new Curseforge('process.env.API_KEY');
+const cf = new Curseforge('$2a$10$eCKwlbe1XtpB0mtlzMjuBOwiHhx7ZBbLBOioSZlchSorEDmhujLxW');
 
 const projectId = '813540';
 const fileId = 6292557; // Substitua com o ID correto do arquivo
