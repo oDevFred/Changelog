@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors'); // Importe o cors
 const { Curseforge } = require('node-curseforge');
+const dotenv = require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000;
