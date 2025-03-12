@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:3000/api/changelog'; // ou '/api/changelog' se estiver na mesma origem
+const apiUrl = 'https://changelog-rt1h.onrender.com/api/changelog'; // ou '/api/changelog' se estiver na mesma origem
 
 async function fetchChangelog() {
     try {
